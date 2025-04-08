@@ -1,4 +1,4 @@
-package com.example.androidmaster
+package com.example.androidmaster.sintaxis
 
 fun main() {
     result(1);
