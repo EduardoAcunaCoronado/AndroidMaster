@@ -80,7 +80,7 @@ class ResultIMCActivity : AppCompatActivity() {
 
     private fun initListeners () {
         btnRecalculate.setOnClickListener {
-            onBackPressed()
+            onBackPressedDispatcher.onBackPressed()
         }
     }
 }
