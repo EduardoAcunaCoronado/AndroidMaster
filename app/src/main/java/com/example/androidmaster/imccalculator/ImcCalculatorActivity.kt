@@ -10,18 +10,29 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidmaster.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.slider.RangeSlider
 
 class ImcCalculatorActivity : AppCompatActivity() {
 
     private var isMaleSelected: Boolean = true
     private var isFemaleSelected: Boolean = false
+    private var currentWeight: Int = 70
+    private var currentAge: Int = 25
 
     private lateinit var viewMale : CardView
     private lateinit var viewFemale : CardView
 
     private lateinit var tvHeight : TextView
     private lateinit var rsHeight : RangeSlider
+
+    private lateinit var tvWeight : TextView
+    private lateinit var btnPlusWeight : FloatingActionButton
+    private lateinit var btnSubtractWeight : FloatingActionButton
+
+    private lateinit var tvAge : TextView
+    private lateinit var btnPlusAge : FloatingActionButton
+    private lateinit var btnSubtractAge : FloatingActionButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,6 +56,14 @@ class ImcCalculatorActivity : AppCompatActivity() {
 
         tvHeight = findViewById<TextView>(R.id.tvHeight)
         rsHeight = findViewById<RangeSlider>(R.id.rsHeight)
+
+        tvWeight = findViewById<TextView>(R.id.tvWeight)
+        btnPlusWeight = findViewById<FloatingActionButton>(R.id.btnPlusWeight)
+        btnSubtractWeight = findViewById<FloatingActionButton>(R.id.btnSubtractWeight)
+
+        tvAge = findViewById<TextView>(R.id.tvAge)
+        btnPlusAge = findViewById<FloatingActionButton>(R.id.btnPlusAge)
+        btnSubtractAge = findViewById<FloatingActionButton>(R.id.btnSubtractAge)
     }
 
     private fun initListeners() {
@@ -61,6 +80,30 @@ class ImcCalculatorActivity : AppCompatActivity() {
             val result = df.format(value)
             tvHeight.text = "$result cm"
         }
+        btnPlusWeight.setOnClickListener {
+            currentWeight++
+            setWeight()
+        }
+        btnSubtractWeight.setOnClickListener {
+            currentWeight--
+            setWeight()
+        }
+        btnPlusAge.setOnClickListener {
+            currentAge++
+            setAge()
+        }
+        btnSubtractAge.setOnClickListener {
+            currentAge--
+            setAge()
+        }
+    }
+
+    private fun setWeight() {
+        tvWeight.text = currentWeight.toString()
+    }
+
+    private fun setAge() {
+        tvAge.text = currentAge.toString()
     }
 
     private fun changeGender(isMale : Boolean) {
@@ -90,6 +133,8 @@ class ImcCalculatorActivity : AppCompatActivity() {
 
     private fun initUI() {
         setGenderColor()
+        setWeight()
+        setAge()
     }
 
 }
