@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidmaster.firstapp.FirstAppActivity
+import com.example.androidmaster.imccalculator.ImcCalculatorActivity
 
 class MenuActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +34,7 @@ class MenuActivity : AppCompatActivity() {
     }
 
     fun navigateToIMCApp () {
-        val intent = Intent(this, FirstAppActivity::class.java)
+        val intent = Intent(this, ImcCalculatorActivity::class.java)
         startActivity(intent)
     }
 }
