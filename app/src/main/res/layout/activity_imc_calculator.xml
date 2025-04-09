@@ -8,12 +8,11 @@
     android:background="@color/background_app"
     android:paddingHorizontal="16dp"
     android:paddingVertical="60dp"
-    android:paddingTop="1000dp"
     tools:context=".imccalculator.ImcCalculatorActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/viewMale"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="50dp"
@@ -51,7 +50,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/viewFemale"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="150dp"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="50dp"
@@ -116,7 +115,7 @@
                 android:id="@+id/tvHeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="120 cm"
+                android:text="@string/defaultHeight"
                 android:textColor="@color/white"
                 android:textSize="38sp"
                 android:textStyle="bold"
