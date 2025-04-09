@@ -5,15 +5,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_app"
     android:paddingHorizontal="16dp"
-    android:paddingVertical="32dp"
+    android:paddingVertical="60dp"
+    android:paddingTop="1000dp"
     tools:context=".imccalculator.ImcCalculatorActivity">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/viewMale"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="10dp"
         app:cardBackgroundColor="@color/background_component_selected"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toStartOf="@+id/viewFemale"
@@ -36,7 +40,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hombre"
+                android:text="@string/male"
                 android:textAllCaps="true"
                 android:textColor="@color/title_text" />
 
@@ -47,8 +51,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/viewFemale"
-        android:layout_width="0dp"
+        android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginHorizontal="10dp"
         app:cardBackgroundColor="@color/background_component"
         app:cardCornerRadius="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -64,14 +70,14 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginBottom="8dp"
                 android:src="@drawable/ic_female"
                 app:tint="@color/white" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Mujer"
+                android:layout_marginTop="8dp"
+                android:text="@string/female"
                 android:textAllCaps="true"
                 android:textColor="@color/title_text" />
 
