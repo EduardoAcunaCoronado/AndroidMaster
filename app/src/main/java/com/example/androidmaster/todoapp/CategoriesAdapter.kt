@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.androidmaster.R
 
 
-class CategoriesAdapter(private val categories: List<TaskCategory>) :
+class CategoriesAdapter(private val categories: List<TaskCategory>, private val onItemSelected:(Int) -> Unit) :
     RecyclerView.Adapter<CategoriesViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -20,7 +20,7 @@ class CategoriesAdapter(private val categories: List<TaskCategory>) :
         holder: CategoriesViewHolder,
         position: Int
     ) {
-        holder.render(categories[position])
+        holder.render(categories[position], onItemSelected)
     }
 
     override fun getItemCount() = categories.size
