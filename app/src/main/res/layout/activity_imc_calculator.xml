@@ -111,7 +111,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text="@string/defaultHeight"
                 android:textColor="@color/white"
                 android:textSize="38sp"
                 android:textStyle="bold" />
@@ -165,8 +164,7 @@
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="38sp"
-                android:textStyle="bold"
-                tools:text="@string/defaultWeight" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
@@ -236,8 +234,7 @@
                 android:gravity="center"
                 android:textColor="@color/white"
                 android:textSize="38sp"
-                android:textStyle="bold"
-                tools:text="@string/defaultAge" />
+                android:textStyle="bold" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"

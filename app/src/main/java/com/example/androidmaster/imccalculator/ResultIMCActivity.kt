@@ -60,7 +60,7 @@ class ResultIMCActivity : AppCompatActivity() {
 
             in 25.00..29.99 -> {
                 tvResult.text = getString(R.string.title_sobrepeso)
-                tvResult.setTextColor(ContextCompat.getColor(this, R.color.sobrepeso))
+                tvResult.setTextColor(ContextCompat.getColor(this, R.color.peso_sobrepeso))
                 tvDescription.text = getString(R.string.description_sobrepeso)
             }
 
