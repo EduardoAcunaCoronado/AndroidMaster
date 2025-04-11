@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.androidmaster.firstapp.FirstAppActivity
 import com.example.androidmaster.imccalculator.ImcCalculatorActivity
+import com.example.androidmaster.superheroapp.SuperHeroListActivity
 import com.example.androidmaster.todoapp.TodoActivity
 
 class MenuActivity : AppCompatActivity() {
@@ -20,10 +21,12 @@ class MenuActivity : AppCompatActivity() {
         val btnSaludApp = findViewById<Button>(R.id.btnSaludApp)
         val btnIMCApp = findViewById<Button>(R.id.btnIMCApp)
         val btnTODO = findViewById<Button>(R.id.btnTODO)
+        val btnSuperhero = findViewById<Button>(R.id.btnSuperhero)
 
         btnSaludApp.setOnClickListener { navigateToSaludApp () }
         btnIMCApp.setOnClickListener { navigateToIMCApp() }
-        btnTODO.setOnClickListener { navigateToTTodoApp() }
+        btnTODO.setOnClickListener { navigateToTodoApp() }
+        btnSuperhero.setOnClickListener { navigateToSuperheroApp() }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -42,8 +45,13 @@ class MenuActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    fun navigateToTTodoApp () {
+    fun navigateToTodoApp () {
         val intent = Intent(this, TodoActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun navigateToSuperheroApp () {
+        val intent = Intent(this, SuperHeroListActivity::class.java)
         startActivity(intent)
     }
 }
